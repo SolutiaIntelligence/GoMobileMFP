@@ -1,0 +1,10 @@
+<ion-view style="" title="Folios">
+    <ion-content class="has-header" padding="'true'">
+        <ion-list style="" ng-if="isLogged()">
+           	<ion-item ng-repeat="folio in folios" href="#/app/folios/{{folio.folio}}"
+           		ng-click="setFolioActual('{{folio.folio}}')">
+           		{{folio.folio}}
+           	</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

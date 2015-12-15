@@ -1,0 +1,32 @@
+<ion-view style="" title="{{getFolioActual()}}">
+    <ion-content class="has-header" padding="'true'">
+    
+    	<div class="row row-no-padding">
+			<div class="col">
+				<img style="width: 100%; height: 100%;" ng-src="{{ctrl.estadoActivo == 1 && 'img/play.png' || 'img/playgray.png'}}"/>
+			</div>
+			<div class="col">
+				<img style="width: 100%; height: 100%;" ng-src="{{ctrl.estadoActivo == 2 && 'img/pause.png' || 'img/pausegray.png'}}"/>
+			</div>
+			<div class="col">
+				<img style="width: 100%; height: 100%;" ng-src="{{ctrl.estadoActivo == 3 && 'img/handshake.png' || 'img/handshakegray.png'}}"/>
+			</div>
+			<div class="col">
+				<img style="width: 100%; height: 100%;" ng-src="{{ctrl.estadoActivo == 4 && 'img/ok.png' || 'img/okgray.png'}}"/>
+			</div>
+			<div class="col">
+				<img style="width: 100%; height: 100%;" ng-src="{{ctrl.estadoActivo == 5 && 'img/alert.png' || 'img/alertgray.png'}}"/>
+			</div>
+		</div>
+	
+    	<form style="" class="list">
+            <ion-radio ng-model="ctrl.estadoActivo" ng-value="1">Continuar</ion-radio>
+            <ion-radio ng-model="ctrl.estadoActivo" ng-value="2">Pausar</ion-radio>
+            <ion-radio ng-model="ctrl.estadoActivo" ng-value="3">Llegada con cliente</ion-radio>
+            <ion-radio ng-model="ctrl.estadoActivo" ng-value="4">Entrega exitosa</ion-radio>
+            <ion-radio ng-model="ctrl.estadoActivo" ng-value="5">Excepción de entrega</ion-radio>
+        </form>
+        <button style="" class="button button-balanced button-block " ng-click="cambiarEstado(ctrl)">Enviar</button>
+	    
+    </ion-content>
+</ion-view>

@@ -1,0 +1,1 @@
+angular.module('app.controllers', ['app.loginCtrl', 'app.foliosCtrl', 'app.detalleFoliosCtrl']);
